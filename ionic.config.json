@@ -1,0 +1,7 @@
+{
+  "name": "othello",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
