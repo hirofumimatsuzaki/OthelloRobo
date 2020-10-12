@@ -12,9 +12,17 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
+<div [hidden]=!ishidden>
+ <div id="canvasContainer"></div>
+ <ion-text color="secondary">
+  <h1>{{this.who}}</h1>
+</ion-text>
+<ion-button expand="block" color="light" (click)="skip()">Skip</ion-button>
+<ion-button expand="block" color="light" (click)="restart()">最初からやり直す</ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+</div>
+<div [hidden]=ishidden>
+ <ion-button expand="block"(click)="mode1()">コンピューターと対戦</ion-button>
+ <ion-button expand="block" color="danger"(click)="mode2()">友達と対戦</ion-button>
+</div>
 </ion-content>
